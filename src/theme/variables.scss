@@ -3,14 +3,20 @@
 
 /** Ionic CSS Variables **/
 :root {
-  /** primary **/
-  --ion-color-primary: #3880ff;
+  /** primary1 **/
+  --ion-color-primary1: #3880ff;
+  --ion-color-primary1-rgb: 56, 128, 255;
+  --ion-color-primary1-contrast: #ffffff;
+  --ion-color-primary1-contrast-rgb: 255, 255, 255;
+  --ion-color-primary1-shade: #3171e0;
+  --ion-color-primary1-tint: #4c8dff;
+
+  --ion-color-primary: rgba(0, 0, 0, 0.65);
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
-
+  --ion-color-primary-shade: rgba(0, 0, 0, 0.65);
+  --ion-color-primary-tint: rgba(0, 0, 0, 0.65);
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
   --ion-color-secondary-rgb: 12, 209, 232;
@@ -74,4 +80,59 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  
+  --ion-color-diy: #0782B3;
+  --ion-color-diy-rgb: 244, 244, 244;
+  --ion-color-diy-contrast: #000000;
+  --ion-color-diy-contrast-rgb: 0, 0, 0;
+  --ion-color-diy-shade: #d7d8da;
+  --ion-color-diy-tint: #f5f6f9;
+
+  .ion-color-diy {//自定义颜色
+    --ion-color-base: #0782B3;
+    --ion-color-base-rgb: 105,187,123;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade: #0782B3;
+    --ion-color-tint: #0782B3;
+  }
+
+  --ion-color-diybac: rgba(238, 240, 244, 1);
+  --ion-color-diybac-rgb: 244, 244, 244;
+  --ion-color-diybac-contrast: #000000;
+  --ion-color-diybac-contrast-rgb: 0, 0, 0;
+  --ion-color-diybac-shade: #d7d8da;
+  --ion-color-diybac-tint: #f5f6f9;
+
+  .ion-color-diybac {//自定义颜色
+    --ion-color-base: rgba(238, 240, 244, 1);
+    --ion-color-base-rgb: 105,187,123;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade: rgba(238, 240, 244, 1);
+    --ion-color-tint: rgba(238, 240, 244, 1);
+  }
+
+  ion-tab-button{//tab的自定义颜色
+    --color: rgba(0, 0, 0, 0.65);
+    --color-selected:#0782B3;
+    // --background: #0ec254;
+  }
+  
+
+  ion-popover{
+    --width :96px;
+    --height: 78px;
+  }
+  ion-menu-button{
+    --color :#000;
+  }
+
+  ion-segment-button{
+    --border-color :rgba(217, 217, 217, 1);
+    --background-checked :#0782B3;
+    --border-radius :4px ;
+    --color-checked:#fff;
+  }
 }

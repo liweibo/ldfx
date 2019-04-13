@@ -1,9 +1,108 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style=text-align:center>转储
     </ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
   </ion-toolbar>
-</ion-header>
 
-<ion-content></ion-content>
+  <div style="margin-left:20px;margin-right:20px;margin-top: 10px;">
+    <ion-segment mode='ios' scrollable='true'>
+      <ion-segment-button mode='ios' value="today" (ionSelect)="todayClicked()">
+        <ion-label>今日</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode='ios' value="week" (ionSelect)="weekClicked()">
+        <ion-label>本周</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode='ios' value="month" (ionSelect)="monthClicked()">
+        <ion-label>本月</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode='ios' value="year" (ionSelect)="yearClicked()">
+        <ion-label>全年</ion-label>
+      </ion-segment-button>
+      <ion-segment-button checked mode='ios' value="diytime" (ionSelect)="diytimeClicked()">
+        <ion-label>自定义时段</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div style="display:flex" [ngClass]="{'hidden': !diytimeSelected}">
+    <div style="margin-left:20px;margin-top: 10px;flex:1">
+      <div class="datetime">
+        <ion-datetime displayFormat="YYYY/MM/DD" min="2017-03-14" max='2030-03-14' value="2018-09-23T15:03:46.789"
+          cancelText='取消' doneText='确定' mode='ios' placeholder="Select Date"></ion-datetime>
+        <span style="margin-right: 8px;"></span>
+        <div class='mystyle'></div>
+      </div>
+    </div>
+
+    <span style="margin-top: 10px;
+      display: flex;justify-content: center;align-items: center;flex:1;
+      font-size:13px;
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:rgba(0,0,0,0.65);
+  ">~</span>
+    <div style="margin-right:20px;margin-top: 10px;float: right;flex:1">
+      <div class="datetime">
+        <ion-datetime displayFormat="YYYY/MM/DD" min="2017-03-14" max='2030-03-14' value="2018-09-23T15:03:46.789"
+          cancelText='取消' doneText='确定' mode='ios' placeholder="Select Date"></ion-datetime>
+        <span style="margin-right: 8px;"></span>
+        <div class='mystyle'></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:9px;width:100vw;"></div>
+  <div style="height:1px;width:100vw;background: rgba(238, 240, 244, 1)"></div>
+</ion-header>
+<ion-content color='diybac'>
+  <div class="contentall">
+    <div class="span1">92.5%</div>
+    <div class="span2">总转储成功率</div>
+  </div>
+  <div class="jiange"></div>
+
+
+  <div class="contentall1">
+    <div class="span1">94.9%</div>
+    <div style="margin-top: 5px;display: flex;justify-content: center" (click)='presentActionSheet()'>
+      <div class="actionsheet">
+        <span style="font-size:13px;color:rgba(0, 0, 0, 0.65);margin-left: 8px;
+            white-space:nowrap; ">0124车</span>
+        <span class='mystyle1'></span>
+      </div>
+    </div>
+    <div class="span2">转储成功率</div>
+  </div>
+  <div class="jiange"></div>
+
+  <div class="contentall1">
+    <div class="span1">88.9%</div>
+    <div style="margin-top: 5px;display: flex;justify-content: center" (click)='presentActionSheet()'>
+      <div class="actionsheet1">
+        <span style="font-size:13px;color:rgba(0, 0, 0, 0.65);margin-left: 8px;
+            white-space:nowrap; ">机务段</span>
+        <span class='mystyle1'></span>
+
+
+      </div>
+      <div style='margin-left: 10px;' class="actionsheet2">
+        <span style="font-size:13px;color:rgba(0, 0, 0, 0.65);margin-left: 8px;
+        white-space:nowrap; ">车间</span>
+        <span class='mystyle1'></span>
+      </div>
+    </div>
+    <div class="span2">联动率</div>
+  </div>
+  <div class="jiange"></div>
+  
+</ion-content>
+
+<ion-footer mode='md'>
+    <ion-toolbar color='diybac'>
+        <div class="footer">数据更新至 2018/09/23 12:48</div>
+    </ion-toolbar>
+  </ion-footer>
